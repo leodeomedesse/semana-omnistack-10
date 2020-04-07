@@ -1,6 +1,8 @@
 const Dev = require('../models/Dev');
 const parseStringAsArray = require('../utils/parseStringAsArray');
 
+
+
 module.exports = {
   async index(request, response){
 
@@ -23,6 +25,6 @@ module.exports = {
       },
     });
 
-    return response.json(devs);
+    return response.json({ devs: [devs] });
   }
 }
